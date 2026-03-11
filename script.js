@@ -10,6 +10,6 @@ ID Game: ${id}
 Server: ${server}
 Produk: ${produk}`
 
-window.open("https://wa.me/6281234567890?text="+encodeURIComponent(text))
+window.open("https://wa.me/6285369408241?text="+encodeURIComponent(text))
 
 }
