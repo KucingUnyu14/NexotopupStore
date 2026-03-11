@@ -3,159 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TopUp Game Store</title>
+<title>NexotopupStore - Top Up Game Murah</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Poppins,Arial;background:#0f172a;color:#fff}
-header{background:#020617;padding:20px;text-align:center;border-bottom:1px solid #1e293b}
-h1{margin:0;font-size:28px}
-nav{display:flex;justify-content:center;gap:20px;margin-top:10px}
-nav a{color:#94a3b8;text-decoration:none}
-.container{max-width:1100px;margin:auto;padding:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#1e293b;border-radius:12px;padding:20px}
-.card h3{margin-top:0}
-input,select{width:100%;padding:12px;border-radius:8px;border:none;margin-top:6px;margin-bottom:15px}
-button{background:#22c55e;border:none;padding:12px;border-radius:8px;color:white;font-weight:600;cursor:pointer;width:100%}
-button:hover{background:#16a34a}
-.price{background:#0f172a;padding:10px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between}
-footer{margin-top:40px;background:#020617;text-align:center;padding:20px;color:#94a3b8}
-.badge{background:#22c55e;color:black;font-size:12px;padding:3px 8px;border-radius:6px}
-.admin{background:#7c3aed}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+background:#020617;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+}
+
+nav a{
+color:#cbd5f5;
+margin-left:20px;
+text-decoration:none;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+.games{
+padding:40px;
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.game{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+text-align:center;
+cursor:pointer;
+transition:.2s;
+}
+
+.game:hover{
+transform:scale(1.05);
+}
+
+.order{
+max-width:500px;
+margin:40px auto;
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:none;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#22c55e;
+border:none;
+border-radius:8px;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:40px;
+background:#020617;
+color:#94a3b8;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>⚡ TOP UP GAME STORE</h1>
+<div class="logo">NexotopupStore</div>
 <nav>
-<a href="#topup">Top Up</a>
-<a href="#cek">Cek Pesanan</a>
-<a href="#admin">Admin</a>
+<a href="#">Home</a>
+<a href="#games">Game</a>
+<a href="#order">Top Up</a>
 </nav>
 </header>
 
-<div class="container">
-
-<section id="topup" class="card">
-<h2>Top Up Mobile Legends</h2>
-
-<label>ID Game</label>
-<input id="idgame" placeholder="Contoh: 12345678">
-
-<label>Server</label>
-<input id="server" placeholder="Contoh: 4321">
-
-<label>Pilih Diamond</label>
-<select id="produk">
-<option value="86">86 Diamond - Rp20.000</option>
-<option value="172">172 Diamond - Rp40.000</option>
-<option value="257">257 Diamond - Rp60.000</option>
-<option value="344">344 Diamond - Rp80.000</option>
-<option value="429">429 Diamond - Rp100.000</option>
-</select>
-
-<label>Metode Pembayaran</label>
-<select id="pay">
-<option>DANA</option>
-<option>OVO</option>
-<option>GoPay</option>
-<option>QRIS</option>
-<option>Bank Transfer</option>
-</select>
-
-<button onclick="buatOrder()">Buat Pesanan</button>
+<section class="hero">
+<h1>Top Up Game Murah & Cepat</h1>
+<p>Proses cepat • Harga bersahabat • Aman terpercaya</p>
 </section>
 
-<section id="cek" class="card">
-<h2>Cek Pesanan</h2>
-<input id="orderid" placeholder="Masukkan ID Pesanan">
-<button onclick="cekOrder()">Cek Status</button>
-<p id="hasil"></p>
-</section>
+<section class="games" id="games">
 
-<section id="admin" class="card admin">
-<h2>Panel Admin (Demo)</h2>
-<p>Melihat daftar order masuk</p>
-<button onclick="lihatOrder()">Lihat Semua Order</button>
-<div id="adminlist"></div>
-</section>
+<h2>Game Populer</h2>
+
+<div class="grid">
+
+<div class="game">Mobile Legends</div>
+<div class="game">Free Fire</div>
+<div class="game">PUBG Mobile</div>
+<div class="game">Valorant</div>
 
 </div>
 
+</section>
+
+<section class="order" id="order">
+
+<h2>Top Up Mobile Legends</h2>
+
+<label>ID Game</label>
+<input id="idgame" placeholder="Masukkan ID Game">
+
+<label>Server</label>
+<input id="server" placeholder="Contoh: 1234">
+
+<label>Pilih Diamond</label>
+<select id="produk">
+
+<option>86 Diamond - Rp20.000</option>
+<option>172 Diamond - Rp40.000</option>
+<option>257 Diamond - Rp60.000</option>
+<option>344 Diamond - Rp80.000</option>
+<option>429 Diamond - Rp100.000</option>
+
+</select>
+
+<button onclick="order()">Pesan via WhatsApp</button>
+
+</section>
+
 <footer>
-<p>© 2026 TopUp Game Store</p>
-<p>Powered by Simple TopUp System</p>
+
+<p>© 2026 NexotopupStore</p>
+<p>Top Up Game Murah dan Aman</p>
+
 </footer>
 
 <script>
 
-let orders=[]
+function order(){
 
-function randomID(){
-return 'ORD'+Math.floor(Math.random()*999999)
-}
+let id=document.getElementById("idgame").value
+let server=document.getElementById("server").value
+let produk=document.getElementById("produk").value
 
-function buatOrder(){
+let text=`Halo admin NexotopupStore saya mau top up
 
-let id=document.getElementById('idgame').value
-let server=document.getElementById('server').value
-let produk=document.getElementById('produk').value
-let pay=document.getElementById('pay').value
+ID Game: ${id}
+Server: ${server}
+Produk: ${produk}`
 
-if(!id||!server){
-alert('Isi ID dan Server')
-return
-}
-
-let order={
-orderid:randomID(),
-id:id,
-server:server,
-produk:produk,
-pay:pay,
-status:'MENUNGGU PEMBAYARAN'
-}
-
-orders.push(order)
-
-alert('Order berhasil dibuat! ID: '+order.orderid)
-
-let text=`Halo admin saya order topup ML%0AOrderID: ${order.orderid}%0AID: ${id}%0AServer: ${server}%0AProduk: ${produk} Diamond%0APembayaran: ${pay}`
-
-window.open(`https://wa.me/6285369408241?text=${text}`,'_blank')
-
-}
-
-function cekOrder(){
-let id=document.getElementById('orderid').value
-
-let order=orders.find(o=>o.orderid===id)
-
-if(order){
-
-hasil.innerHTML=`Status: ${order.status}<br>ID Game: ${order.id}`
-
-}else{
-
-hasil.innerHTML='Order tidak ditemukan'
-
-}
-
-}
-
-function lihatOrder(){
-
-let html=''
-
-orders.forEach(o=>{
-html+=`<div class="price">${o.orderid} - ${o.produk} Diamond <span>${o.status}</span></div>`
-})
-
-if(!html) html='Belum ada order'
-
-adminlist.innerHTML=html
+window.open(`https://wa.me/6285369408241?text=${encodeURIComponent(text)}`)
 
 }
 
